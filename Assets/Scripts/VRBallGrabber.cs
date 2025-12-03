@@ -102,8 +102,11 @@ namespace VRBowling.Scripts
         
         private void TrackVelocity()
         {
-            velocityHistory[velocityIndex] = rb.linearVelocity;
-            velocityIndex = (velocityIndex + 1) % velocityHistory.Length;
+            if (rb != null)
+            {
+                velocityHistory[velocityIndex] = rb.linearVelocity;
+                velocityIndex = (velocityIndex + 1) % velocityHistory.Length;
+            }
         }
         
         private void OnGrab(SelectEnterEventArgs args)

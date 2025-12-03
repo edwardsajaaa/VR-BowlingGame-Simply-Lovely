@@ -25,9 +25,13 @@ namespace VRBowling.Scripts
         
         private AudioSource audioSource;
         
+        // Scoring constants
+        private const int MAX_FRAMES = 10;
+        private const int MAX_THROWS = 21; // Maximum throws in a bowling game
+        
         // Scoring
-        private int[] frameScores = new int[10];
-        private int[] throwScores = new int[21]; // Maximum 21 throws in a game
+        private int[] frameScores = new int[MAX_FRAMES];
+        private int[] throwScores = new int[MAX_THROWS];
         private int currentFrame = 0;
         private int currentThrow = 0;
         private int totalScore = 0;
@@ -148,9 +152,16 @@ namespace VRBowling.Scripts
             
             // Count knocked down pins
             int pinsKnockedDown = bowlingLane.GetKnockedDownPinCount();
-            int pinsKnockedThisThrow = isFirstThrowInFrame ? 
-                pinsKnockedDown : 
-                pinsKnockedDown - throwScores[currentThrow - 1];
+            int pinsKnockedThisThrow;
+            
+            if (isFirstThrowInFrame || currentThrow == 0)
+            {
+                pinsKnockedThisThrow = pinsKnockedDown;
+            }
+            else
+            {
+                pinsKnockedThisThrow = pinsKnockedDown - throwScores[currentThrow - 1];
+            }
             
             // Record the throw
             throwScores[currentThrow] = pinsKnockedThisThrow;
@@ -260,7 +271,7 @@ namespace VRBowling.Scripts
                     isFirstThrowInFrame = true;
                     bowlingLane.SetupPins();
                 }
-                else if (throwScores[currentThrow - 2] == 10) // First throw was a strike
+                else if (currentThrow >= 2 && throwScores[currentThrow - 2] == 10) // First throw was a strike
                 {
                     if (isStrike)
                     {
@@ -308,7 +319,7 @@ namespace VRBowling.Scripts
             totalScore = 0;
             int throwIndex = 0;
             
-            for (int frame = 0; frame < 10; frame++)
+            for (int frame = 0; frame < MAX_FRAMES; frame++)
             {
                 if (throwIndex >= currentThrow + 1) break;
                 
@@ -317,24 +328,24 @@ namespace VRBowling.Scripts
                     frameScores[frame] = 10;
                     
                     // Add bonus (next two throws)
-                    if (throwIndex + 1 < 21) frameScores[frame] += throwScores[throwIndex + 1];
-                    if (throwIndex + 2 < 21) frameScores[frame] += throwScores[throwIndex + 2];
+                    if (throwIndex + 1 < MAX_THROWS) frameScores[frame] += throwScores[throwIndex + 1];
+                    if (throwIndex + 2 < MAX_THROWS) frameScores[frame] += throwScores[throwIndex + 2];
                     
                     throwIndex++;
                 }
-                else if (throwIndex + 1 < 21 && throwScores[throwIndex] + throwScores[throwIndex + 1] == 10) // Spare
+                else if (throwIndex + 1 < MAX_THROWS && throwScores[throwIndex] + throwScores[throwIndex + 1] == 10) // Spare
                 {
                     frameScores[frame] = 10;
                     
                     // Add bonus (next throw)
-                    if (throwIndex + 2 < 21) frameScores[frame] += throwScores[throwIndex + 2];
+                    if (throwIndex + 2 < MAX_THROWS) frameScores[frame] += throwScores[throwIndex + 2];
                     
                     throwIndex += 2;
                 }
                 else // Normal
                 {
                     frameScores[frame] = throwScores[throwIndex];
-                    if (throwIndex + 1 < 21) frameScores[frame] += throwScores[throwIndex + 1];
+                    if (throwIndex + 1 < MAX_THROWS) frameScores[frame] += throwScores[throwIndex + 1];
                     
                     throwIndex += 2;
                 }

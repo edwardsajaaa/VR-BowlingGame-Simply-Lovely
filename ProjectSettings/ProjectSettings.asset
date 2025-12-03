@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!129 &1
+PlayerSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 24
+  productGUID: 00000000000000000000000000000000
+  AndroidProfiler: 0
+  AndroidFilterTouchesWhenObscured: 0
+  AndroidEnableSustainedPerformanceMode: 0
+  defaultScreenOrientation: 4
+  targetDevice: 2
+  useOnDemandResources: 0
+  accelerometerFrequency: 60
+  companyName: SimplyLovely
+  productName: VR Bowling Game
+  defaultCursor: {fileID: 0}
+  cursorHotspot: {x: 0, y: 0}
+  m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
+  m_ShowUnitySplashScreen: 1
+  m_ShowUnitySplashLogo: 1
+  m_SplashScreenOverlayOpacity: 1
+  m_SplashScreenAnimation: 1
+  m_SplashScreenLogoStyle: 1
+  m_SplashScreenDrawMode: 0
+  m_SplashScreenBackgroundAnimationZoom: 1
+  m_SplashScreenLogoAnimationZoom: 1
+  m_SplashScreenBackgroundLandscapeAspect: 1
+  m_SplashScreenBackgroundPortraitAspect: 1
+  m_SplashScreenBackgroundLandscapeUvs:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  m_SplashScreenBackgroundPortraitUvs:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  m_SplashScreenLogos: []
+  m_VirtualRealitySplashScreen: {fileID: 0}
+  m_HolographicTrackingLossScreen: {fileID: 0}
+  defaultScreenWidth: 1920
+  defaultScreenHeight: 1080
+  defaultScreenWidthWeb: 960
+  defaultScreenHeightWeb: 600
+  m_StereoRenderingPath: 1
+  m_ActiveColorGamuts: 00000000
+  targetPixelDensity: 30
+  resolutionScalingMode: 0
+  resetResolutionOnWindowResize: 0
+  androidSupportedAspectRatio: 1
+  androidMaxAspectRatio: 2.1
+  applicationIdentifier:
+    Android: com.SimplyLovely.VRBowlingGame
+    Standalone: com.SimplyLovely.VRBowlingGame
+  buildNumber:
+    Standalone: 0
+    Android: 0
+  overrideDefaultApplicationIdentifier: 1
+  AndroidBundleVersionCode: 1
+  AndroidMinSdkVersion: 29
+  AndroidTargetSdkVersion: 33
+  AndroidPreferredInstallLocation: 1
+  aotOptions: 
+  stripEngineCode: 1
+  iPhoneStrippingLevel: 0
+  iPhoneScriptCallOptimization: 0
+  ForceInternetPermission: 0
+  ForceSDCardPermission: 0
+  CreateWallpaper: 0
+  APKExpansionFiles: 0
+  keepLoadedShadersAlive: 0
+  StripUnusedMeshComponents: 1
+  strictShaderVariantMatching: 0
+  VertexChannelCompressionMask: 4054
+  iPhoneSdkVersion: 988
+  iOSTargetOSVersionString: 12.0
+  tvOSSdkVersion: 0
+  tvOSRequireExtendedGameController: 0
+  tvOSTargetOSVersionString: 12.0
+  uIPrerenderedIcon: 0
+  uIRequiresPersistentWiFi: 0
+  uIRequiresFullScreen: 1
+  uIStatusBarHidden: 1
+  uIExitOnSuspend: 0
+  uIStatusBarStyle: 0
+  appleDeveloperTeamID: 
+  iOSManualSigningProvisioningProfileID: 
+  tvOSManualSigningProvisioningProfileID: 
+  iOSManualSigningProvisioningProfileType: 0
+  tvOSManualSigningProvisioningProfileType: 0
+  appleEnableAutomaticSigning: 0
+  iOSRequireARKit: 0
+  iOSAutomaticallyDetectAndAddCapabilities: 1
+  appleEnableProMotion: 0
+  shaderPrecisionModel: 0
+  clonedFromGUID: c0afd0d1d80e3634a9dac47e8a0426ea
+  templatePackageId: com.unity.template.3d@9.0.0
+  templateDefaultScene: Assets/Scenes/SampleScene.unity
+  useCustomMainManifest: 0
+  useCustomLauncherManifest: 0
+  useCustomMainGradleTemplate: 0
+  useCustomLauncherGradleManifest: 0
+  useCustomBaseGradleTemplate: 0
+  useCustomGradlePropertiesTemplate: 0
+  useCustomGradleSettingsTemplate: 0
+  useCustomProguardFile: 0
+  AndroidTargetArchitectures: 1
+  AndroidTargetDevices: 0
+  AndroidSplashScreenScale: 0
+  androidSplashScreen: {fileID: 0}
+  AndroidKeystoreName: 
+  AndroidKeyaliasName: 
+  AndroidBuildApkPerCpuArchitecture: 0
+  AndroidTVCompatibility: 0
+  AndroidIsGame: 1
+  AndroidEnableTango: 0
+  androidEnableBanner: 1
+  androidUseLowAccuracyLocation: 0
+  androidUseCustomKeystore: 0
+  m_AndroidBanners:
+  - width: 320
+    height: 180
+    banner: {fileID: 0}
+  androidGamepadSupportLevel: 0
+  chromeosInputEmulation: 1
+  AndroidMinifyRelease: 0
+  AndroidMinifyDebug: 0
+  AndroidValidateAppBundleSize: 1
+  AndroidAppBundleSizeToValidate: 150
+  m_BuildTargetIcons: []
+  m_BuildTargetPlatformIcons: []
+  m_BuildTargetBatching: []
+  m_BuildTargetShaderSettings: []
+  m_BuildTargetGraphicsJobs: []
+  m_BuildTargetGraphicsJobMode: []
+  m_BuildTargetGraphicsAPIs: []
+  m_BuildTargetVRSettings:
+  - m_BuildTarget: Standalone
+    m_Enabled: 1
+    m_Devices:
+    - OpenXR
+  - m_BuildTarget: Android
+    m_Enabled: 1
+    m_Devices:
+    - OpenXR
+  openGLRequireES31: 0
+  openGLRequireES31AEP: 0
+  openGLRequireES32: 0
+  m_TemplateCustomTags: {}
+  mobileMTRendering:
+    Android: 1
+    iPhone: 1
+    tvOS: 1
+  XRSettings:
+    m_StereoRenderingPath: 1
+    m_ShowDevicesEnabledWarning: 1
+    m_Enabled: 1
